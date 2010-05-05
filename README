@@ -1,0 +1,9 @@
+See the wiki for a project description
+
+Directory structure:
+year/category/sub-category/post-id.tex
+
+year is the four-digit year of the original post
+category is the forum (or sub-forum) of the post
+sub-category is a name that seemed to make sense
+post-id is the original post id on the mathhelpforum.com web site
