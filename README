@@ -15,6 +15,7 @@ post-id is the original post id on the mathhelpforum.com web site
 git (you'll probably want to use git-gui as well)
 latex and associated packages (uses times, url, amssymb, graphicx, varioref, and geometry)
 asymptote
+dvipdfm
 
 
 ## DOWNLOADING A SNAPSHOT ##
@@ -35,10 +36,11 @@ This will create a book-name.dvi (e.g., 2005.dvi) file, which you can view in yo
 
 It will save you a lot of time (and the rest of us a headache) if you add these files to your the git exclude file (./git/info/exclude):
 
-*.aux
-*.dvi
-*.log
 *.eps
+*.aux
+*.log
+*.dvi
+*.pdf
 
 If you use vim and don't store your temporary files in a special place (why?), add this
 
