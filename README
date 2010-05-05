@@ -17,6 +17,20 @@ latex and associated packages (uses times, url, amssymb, graphicx, varioref, and
 asymptote
 
 
+## DOWNLOADING A SNAPSHOT ##
+
+You can download a snapshot from the github web site: http://github.com/lovek323/mhfbook
+
+
+## COMPILING ##
+
+In one of the year subdirectories (e.g., 2005), execute
+
+./build.sh
+
+This will create a book-name.dvi (e.g., 2005.dvi) file, which you can view in your favourite dvi viewer (e.g., xdvi).
+
+
 ## GIT EXCLUDE ##
 
 It will save you a lot of time (and the rest of us a headache) if you add these files to your the git exclude file (./git/info/exclude):
