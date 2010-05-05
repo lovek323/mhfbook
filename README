@@ -50,3 +50,5 @@ If you use vim and don't store your temporary files in a special place (why?), a
 Do not commit compiled files (eps, pdf, dvi, etc.). Only commit the source files. Anyone with a properly set-up system will be able to compile the files and we'll release compiled versions at appropriate milestones.
 
 Give good commit messages if you can be bothered.
+
+Don't forget to push your changes to the master branch if you're happy with them.
