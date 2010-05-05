@@ -1,9 +1,38 @@
 See the wiki for a project description
 
-Directory structure:
+## DIRECTORY STRUCTURE ##
+
 year/category/sub-category/post-id.tex
 
 year is the four-digit year of the original post
 category is the forum (or sub-forum) of the post
 sub-category is a name that seemed to make sense
 post-id is the original post id on the mathhelpforum.com web site
+
+
+## SOFTWARE REQURIED ##
+
+git
+latex and associated packages (uses times, url, amssymb, graphicx, varioref, and geometry)
+asymptote
+
+
+## GIT EXCLUDE ##
+
+It will save you a lot of time (and the rest of us a headache) if you add these files to your the git exclude file (./git/info/exclude):
+
+*.aux
+*.dvi
+*.log
+*.eps
+
+If you use vim and don't store your temporary files in a special place (why?), add this
+
+*.swp
+
+
+## PLEASE ##
+
+Do not commit compiled files (eps, pdf, dvi, etc.). Only commit the source files. Anyone with a properly set-up system will be able to compile the files and we'll release compiled versions at appropriate milestones.
+
+Give good commit messages if you can be bothered.
