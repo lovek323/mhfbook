@@ -1,0 +1,19 @@
+\question{Differentiate $f\left(x\right)=\left(x^2+1\right)^8$ and hence find $\int x\left(x^2+1\right)^7~dx$.}{calculus/234-differentiation.html}{13 May 2005}
+
+\paragraph{Solution.}\partSolutionAuthor{ticbol}
+
+Using the product rule, we can find the derivative of $f\left(x\right)$
+
+\begin{eqnarray*}
+	f^\prime\left(x\right)&=&8\left(x^2+1\right)^7\left(2x+0\right)\\
+	&=&8\left(x^2+1\right)^7\left(2x\right)\\
+	&=&=16x\left(x^2+1\right)^7.
+\end{eqnarray*}
+
+Using this result, we can determine the required integral quite easily:
+
+\begin{eqnarray*}
+	\int16x\left(x^2+1\right)^7~dx&=&\left(x^2+1\right)^8+C_1\\
+	\Rightarrow16\int x\left(x^2+1\right)^7~dx&=&\left(x^2+1\right)^8+C_2\\
+	\Rightarrow\int x\left(x^2+1\right)^7~dx&=&\frac{\left(x^2+1\right)^8}{16}+C_2.
+\end{eqnarray*}
