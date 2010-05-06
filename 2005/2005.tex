@@ -1,30 +1,73 @@
 \documentclass[a4paper]{book}
 
-\usepackage{times,url,amssymb,graphicx,varioref,ifpdf}
+\usepackage{times,amssymb,graphicx,varioref,framed,xcolor,iwona,sectsty}
+\usepackage[hyphens]{url}
 \usepackage[margin=1in]{geometry}
+\usepackage[Bjarne]{fncychap}
 
-\newcommand{\partSolutionAuthor}[1]{\footnotesize Part of this solution written by #1 from Math Help Forum.\normalsize}
-\newcommand{\solutionAuthor}[1]{\footnotesize This solution written by #1 from Math Help Forum.\normalsize}
+\definecolor{shadecolor}{rgb}{0.95,0.95,0.95}
+
+\renewcommand{\rmdefault}{ptm}
+\allsectionsfont{\sffamily\uppercase}
+
+\newcommand{\partSolutionAuthor}[1]{Part of this solution written by \underline{#1} from Math Help Forum.}
+\newcommand{\solutionAuthor}[1]{This solution written by \underline{#1} from Math Help Forum.}
+\newcommand{\question}[3]{\begin{shaded}\vspace{-18pt}\paragraph{Question \addtocounter{QUESTION}{1}\arabic{QUESTION}.} #1
+
+\vspace{12pt}
+\hrule
+
+\url{http://www.mathhelpforum.com/math-help/#2}
+
+Posted #3\end{shaded}}
+
+\newcounter{QUESTION}
+
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% Fix fncychap toc problems
+\makeatletter
+\renewcommand\tableofcontents{%
+    \if@twocolumn
+      \@restonecoltrue\onecolumn
+    \else
+      \@restonecolfalse
+    \fi
+    \chapter*{\contentsname}%
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}%
+    \@starttoc{toc}%
+    \if@restonecol\twocolumn\fi
+    }
+\makeatother    
 
 \begin{document}
+    \title{Math Help Forum\\\vspace{12pt}\Large\textsc{A collection of problems and solutions}\\\vspace{12pt}\Huge\textit{2005}}
+    \author{Typeset by J D O'Conal}
+    \date{}
+
+    \maketitle
+
+    \tableofcontents
+
 	\chapter{Calculus}
 
 	\section{Single-variable differential calculus}
 
-	\begin{enumerate}
-		\item\input calculus/differential/36
-		\item\input calculus/differential/63
-	\end{enumerate}
+    \input calculus/differential/36
+    \input calculus/differential/63
 
 	\section{Single-variable integral calculus}
 
-	\begin{enumerate}
-		\item\input calculus/integral/37
-	\end{enumerate}
+    \input calculus/integral/37
+    \input calculus/integral/80
 
 	\section{Multi-variable integral calculus}
 
-	\begin{enumerate}
-		\item\input calculus/multi-integral/43
-	\end{enumerate}
+    \input calculus/multi-integral/43
+
+    \chapter{Geometry}
+    
+	\input geometry/77
 \end{document}

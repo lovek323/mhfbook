@@ -1,0 +1,27 @@
+\question{Find the area of the triangle with the vertices $A\left(0,1\right)$, $B\left(-3,-2\right)$, and $C\left(-4,4\right)$. (See figure \vref{77.fig1}.)}{calculus/77-area-between-curves.html}{17 April 2005}
+
+\begin{figure}\caption{}\label{77.fig1}\begin{center}\includegraphics[scale=0.5]{asy/77.fig1.asy.eps}\end{center}\end{figure}
+
+\paragraph{Solution} Heron's formula states that the area $\mathcal{A}$ of a triangle whose sides have lengths $a$, $b$, and $c$ is
+
+\[\mathcal{A}=\sqrt{s\left(s-a\right)\left(s-b\right)\left(s-c\right)}\]
+
+where $s$ is the semiperimiter of the triangle
+
+\[s=\frac{a+b+c}{2}.\]
+
+For our triangle,
+
+\[a=\overrightarrow{AB}=\sqrt{\left(0-\left(-3\right)\right)^2+\left(1-\left(-2\right)\right)^2}=\sqrt{3^2+3^2}=\sqrt{18}\]
+\[b=\overrightarrow{BC}=\sqrt{\left(-3-\left(-4\right)\right)^2+\left(-2-4\right)^2}=\sqrt{1^2+6^2}=\sqrt{37}\]
+\[c=\overrightarrow{CA}=\sqrt{\left(-4-0\right)^2+\left(4-1\right)^2}=\sqrt{\left(-4\right)^2+3^2}=5.\]
+
+
+\[\Rightarrow s=\frac{a+b+c}{2}=\frac{5+\sqrt{18}+\sqrt{37}}{2}.\]
+
+Thus, the area of the triangle $\triangle ABC$ is
+
+\begin{eqnarray*}
+    \mathcal{A}&=&\sqrt{\frac{5+\sqrt{18}+\sqrt{37}}{2}\left(\frac{5+\sqrt{18}+\sqrt{37}}{2}-\sqrt{18}\right)\left(\frac{5+\sqrt{18}+\sqrt{37}}{2}-\sqrt{37}\right)\left(\frac{5+\sqrt{18}+\sqrt{37}}{2}-5\right)}\\
+    &\approx&10.5\mbox{ units}^2
+\end{eqnarray*}

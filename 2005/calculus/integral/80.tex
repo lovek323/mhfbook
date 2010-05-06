@@ -1,0 +1,17 @@
+\question{Find
+
+\[\int\cos\left(x\right)\sin^6\left(x\right)~dx.\]}{calculus/80-analytic-geom-calc-1-a.html}{18 April 2005}
+
+\paragraph{Solution}\solutionAuthor{beepnoodle}
+
+We will use integration by parts. Integration by parts is the opposite of the product rule of differentiation.
+
+Let $u=\sin\left(x\right)$. Now,
+
+\[\frac{du}{dx}=\cos\left(x\right)\Rightarrow du=\cos\left(x\right)~dx.\]
+
+\begin{eqnarray*}
+	\int\cos\left(x\right)\sin^6\left(x\right)~dx&=&\int u^6~du\\
+	&=&\frac{1}{7}u^7+C\\
+	&=&\frac{1}{7}\sin^7\left(x\right)+C\qquad\mbox{(substituting }u\mbox{ back in)}.
+\end{eqnarray*}

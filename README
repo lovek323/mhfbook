@@ -13,7 +13,7 @@ post-id is the original post id on the mathhelpforum.com web site
 ## SOFTWARE REQURIED ##
 
 git (you'll probably want to use git-gui as well)
-latex and associated packages (uses times, url, amssymb, graphicx, varioref, and geometry)
+latex and associated packages (uses times, url, amssymb, graphicx, varioref, geometry, framed, color, iwona, and sectsty)
 asymptote
 dvipdfm
 
@@ -41,6 +41,7 @@ It will save you a lot of time (and the rest of us a headache) if you add these 
 *.log
 *.dvi
 *.pdf
+*.toc
 
 If you use vim and don't store your temporary files in a special place (why?), add this
 
