@@ -2,11 +2,12 @@ See the wiki for a project description
 
 ## DIRECTORY STRUCTURE ##
 
-year/category/sub-category/post-id.tex
+year/part/chapter/section/post-id.tex
 
 year is the four-digit year of the original post
-category is the forum (or sub-forum) of the post
-sub-category is a name that seemed to make sense
+part is one of `foundations', `algebra', `geometry', or `analysis' (from http://www.math.niu.edu/~rusin/known-math/index/beginners.html)
+chapter is the subdivision of the part (from http://www.math.niu.edu/~rusin/known-math/index/beginners.html) which seemed to fit best
+section is the subdivision of the chapter (from http://www.math.niu.edu/~rusin/known-math/index/beginners.html) which seemed to fit best
 post-id is the original post id on the mathhelpforum.com web site
 
 
