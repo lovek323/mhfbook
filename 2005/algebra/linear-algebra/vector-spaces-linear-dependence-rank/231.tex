@@ -1,0 +1,39 @@
+\question{An aircraft going from Atlanta, GA to New York, NY on a bearing of S69$^\circ$E is travelling at a speed of 430 miles per hour. The wind is blowing out of the north to south at a speed of 25 miles per hour. Find the ground speed and the plane's true bearing.}{calculus/231-airplane-wind-speed.html}{13 May 2005}
+
+\paragraph{Solution.}\partSolutionAuthor{Math Help}
+
+\partSolutionAuthor{HallsofIvy}
+
+The best way to go about this problem is to draw a figure of what's happening.
+
+Let $\mathbf{v}$ be the vector representing the plane's travel for an hour and $\mathbf{w}$ be the vector representing the wind offset.
+
+We do not need to provide an exact definition for $\mathbf{v}$, but it is easy to see that $\mathbf{w}=\left[0,-25\right]$.
+
+In figure \vref{231.fig1}, we can see that $\alpha=21^\circ$, as the angles in a triangle add up to $180^\circ$, and we have a $69^\circ$ angle and a $90^\circ$ angle in that triangle. Using the fact that a straight line is $180^\circ$, we have $\beta=180^\circ-21^\circ=150^\circ$.
+
+\begin{figure}[h]\caption{}\label{231.fig1}\begin{center}\includegraphics[scale=0.5]{asy/231.fig1.asy.eps}\end{center}\end{figure}
+
+Figure \vref{231.fig2} shows the triangle in question not drawn to scale to make it easier to read.
+
+\begin{figure}[h]\caption{}\label{231.fig2}\begin{center}\includegraphics[scale=0.5]{asy/231.fig2.asy.eps}\end{center}\end{figure}
+
+We need to find the plane's actual ground speed ($\mathbf{x}$ in the figure).
+
+\begin{eqnarray*}
+	\left|\mathbf{x}\right|&=&430^2+25^2-2\left(430\right)\left(25\right)\cos\left(159^\circ\right)\qquad\mbox{(law of cosines)}\\
+	&\approx&453.43
+\end{eqnarray*}
+
+The magnitude of $\mathbf{x}$ is approximately 453.43, which means that the plane is actually travelling at approximately 453.43 miles per hour.
+
+We can now use the \emph{sine law} to find the angle at the top of the triangle ($\gamma$ in figure \vref{231.fig2}.
+
+\begin{eqnarray*}
+	\frac{\sin\left(159^\circ\right)}{453.43}&\approx&\frac{\sin\left(\gamma\right)}{25}\\
+	\Rightarrow\sin\left(\gamma\right)&\approx&25\frac{\sin\left(159^\circ\right)}{453.43}\\
+	\Rightarrow\gamma&\approx&\sin^{-1}\left(25\frac{\sin\left(159^\circ\right)}{453.43}\right)\\
+	&\approx&1.13^\circ
+\end{eqnarray*}
+
+Thus, the plane's true heading is approximately $\mbox{S}\left(69+1.13\right)^\circ\mbox{E}=\mbox{S}70.13\mbox{E}$.
