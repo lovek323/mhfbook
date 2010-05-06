@@ -1,0 +1,104 @@
+\question{Find
+
+\[\int\frac{2x+2}{\left(x^2+1\right)\left(x+1\right)^3}~dx.\]}{calculus/86-partial-fractions-help-please.html}{20 April 2005}
+
+\paragraph{Solution}\solutionAuthor{ticbol}
+
+First some simplification:
+
+\begin{eqnarray}
+	\frac{2x+2}{\left(x^2+1\right)\left(x+1\right)^3}&=&2\frac{x+1}{\left(x^2+1\right)\left(x+1\right)^3}\nonumber\\
+	&=&\frac{2}{\left(x^2+1\right)\left(x+1\right)^2}.\label{86a}
+\end{eqnarray}
+
+We need to decompose \ref{86a} into partial fractions.
+
+\begin{eqnarray}
+	\frac{2}{\left(x^2+1\right)\left(x+1\right)^2}&=&\frac{Ax+B}{x^2+1}+\frac{C}{x+1}+\frac{D}{\left(x+1\right)^2}\label{86b}\\
+	\Rightarrow2&=&\left(Ax+B\right)\left(x+1\right)^2+C\left(x^2+1\right)\left(x+1\right)+D\left(x^2+1\right)\label{86c}\\
+    &&\qquad\mbox{(multiply both sides by }\left(x^2+1\right)\left(x+1\right)^2\mbox{)}\nonumber
+\end{eqnarray}
+
+Now, solve for $A$, $B$, $C$, and $D$ in \ref{86c}.
+
+Setting $x$ to $-1$ in \ref{86c} gives
+
+\begin{eqnarray*}
+    2&=&\left(A\left(-1\right)+B\right)\left(-1+1\right)^2+C\left(\left(-1\right)^2+1\right)\left(-1+1\right)+D\left(\left(-1\right)^2+1\right)\\
+    \Rightarrow2&=&0+0+2D\\
+    \Rightarrow D&=&1.
+\end{eqnarray*}
+
+Setting $x$ to $0$ and substituting our value for $D$ in \ref{86c} gives
+
+\begin{eqnarray}
+	2&=&\left(A\left(0\right)+B\right)\left(0+1\right)^2+C\left(0^2+1\right)\left(0+1\right)+\left(1\right)\left(0^2+1\right)\nonumber\\
+    \Rightarrow2&=&B\left(1\right)+C\left(1\right)\left(1\right)+1\left(1\right)\nonumber\\
+    \Rightarrow B+C&=&1.\label{86d}
+\end{eqnarray}
+
+Setting $x$ to $1$ and substituting our value for $D$ in \ref{86c} gives
+
+\begin{eqnarray}
+	2&=&\left(A\left(1\right)+B\right)\left(1+1\right)^2+C\left(\left(1\right)^2+1\right)\left(1+1\right)+\left(1\right)\left(\left(1\right)^2+1\right)\nonumber\\
+    \Rightarrow2&=&\left(A+B\right)\left(2\right)^2+C\left(2\right)\left(2\right)+1\left(2\right)\nonumber\\
+    \Rightarrow2-2&=&4\left(A+B\right)+4C\nonumber\\
+    \Rightarrow0&=&4\left(A+B\right)+4C\nonumber\\
+    \Rightarrow A+B+C&=&0.\label{86e}
+\end{eqnarray}
+
+Now, we subtract \ref{86d} from \ref{86e},
+
+\begin{eqnarray*}
+    A+B+C-\left(B+C\right)&=&0-1\\
+    \Rightarrow A&=&-1.
+\end{eqnarray*}
+
+Setting $x$ to $2$ and substituting our values for $A$ and $D$ in \ref{86c} gives
+
+\begin{eqnarray}
+	2&=&\left(\left(-1\right)\left(2\right)+B\right)\left(2+1\right)^2+C\left(2^2+1\right)\left(2+1\right)+\left(1\right)\left(2^2+1\right)\nonumber\\
+    \Rightarrow2&=&\left(-2+B\right)\left(3\right)^2+C\left(5\right)\left(3\right)+1\left(5\right)\nonumber\\
+    \Rightarrow2&=&\left(-2+B\right)\left(9\right)+15C+5\nonumber\\
+    \Rightarrow2&=&-18+9B+15C+5\nonumber\\
+    \Rightarrow2+18-5&=&9B+15C\nonumber\\
+    \Rightarrow15&=&9B+15C\nonumber\\
+    \Rightarrow5&=&3B+5C.\label{86f}
+\end{eqnarray}
+
+From \ref{86d}, we know that $C=1-B$. Substituting that into \ref{86f}
+
+\begin{eqnarray*}
+    5&=&3B+5\left(1-B\right)\\
+    \Rightarrow5&=&3B+5-5B\\
+    \Rightarrow5-5&=&-2B\\
+    \Rightarrow B&=&0.
+\end{eqnarray*}
+
+Substituting our value for $B$ into \ref{86d} gives
+
+\[C=1-0=1.\]
+
+We have found
+
+\begin{eqnarray*}
+    A&=&-1\\
+    B&=&0\\
+    C&=&1\\
+    D&=&1
+\end{eqnarray*}
+
+Thus,
+
+\begin{eqnarray*}
+    \frac{2}{\left(x^2+1\right)\left(x+1\right)^2}&=&\frac{Ax+B}{x^2+1}+\frac{X}{x+1}+\frac{D}{\left(x+1\right)^2}\qquad\mbox{(from \ref{86b})}\\
+    &=&\frac{-1x+0}{x^2+1}+\frac{1}{x+1}+\frac{1}{\left(x+1\right)^2}\\
+    &=&\frac{-x}{x^2+1}+\frac{1}{x+1}+\frac{1}{\left(x+1\right)^2},
+\end{eqnarray*}
+
+which gives us
+
+\begin{eqnarray*}
+    \int\frac{2x+2}{\left(x^2+1\right)\left(x+1\right)^3}~dx&=&\frac{-x}{x^2+1}+\frac{1}{x+1}+\frac{1}{\left(x+1\right)^2}\\
+    &=&-\frac{1}{2}\ln\left(x^2+1\right)+\ln\left(x+1\right)-\frac{1}{x+1}+C.
+\end{eqnarray*}
