@@ -1,0 +1,35 @@
+\question{Find
+
+\[\lim_{x\to0}\frac{1-\cos x}{x^2}.\]}{calculus/289-help.html}{23 May 2005}
+
+\index{Limit of a function}
+\index{function, Limit of a}
+\index{L'H\^{o}pital's rule}
+
+\paragraph{Solution.}\solutionAuthor{paultwang}
+
+L'H\^{o}pital's rule states that, if
+
+\[\lim_{x\to c}f\left(x\right)=\lim_{x\to c}g\left(x\right)=0\]
+
+and
+
+\[\lim_{x\to c}\frac{f^\prime\left(x\right)}{g^\prime\left(x\right)}\]
+
+exists, then
+
+\[\lim_{x\to c}\frac{f\left(x\right)}{g\left(x\right)}=\lim_{x\to c}\frac{f^\prime\left(x\right)}{g^\prime\left(x\right)}.\]
+
+Let $f\left(x\right)=1-\cos x$ and $g\left(x\right)=x^2$.
+
+Now,
+
+\[\lim_{x\to0}f\left(x\right)=0\mbox{ and }\lim_{x\to0}g\left(x\right)=0.\]
+
+Thus,
+
+\begin{eqnarray*}
+	\lim_{x\to0}\frac{1-\cos x}{x^2}&=&\lim{x\to0}\frac{\frac{d}{dx}\left(1-\cos x\right)}{\frac{d}{dx}\left(x^2\right)}\\
+	&=&\lim_{x\to0}\frac{1}{2}\frac{\sin x}{x}\\
+	&=&\frac{1}{2}\qquad\mbox{(the fact that }\lim_{x\to0}\frac{\sin x}{x}=0\mbox{ is an elementary calculus identity).}
+\end{eqnarray*}
