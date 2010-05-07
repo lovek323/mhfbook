@@ -22,6 +22,7 @@ done
 # Compile latex
 echo "Compiling $directory.tex"
 latex -interaction=nonstopmode $directory.tex > /dev/null
+makeindex 2005 &> /dev/null
 latex -interaction=nonstopmode $directory.tex > /dev/null
 latex -interaction=nonstopmode $directory.tex > /dev/null
 

@@ -1,0 +1,56 @@
+\question{The polar curve $C$ is given by the polar equation $r=1+\cos\left(\theta\right)$. Find the length of $C$ for $\theta\in\left[0^c,2^c\right]$.}{calculus/270-polar-curves-please-help.html}{21 May 2005}
+
+\index{Integration}
+\index{Applications of integration}
+\index{integration, Applications of}
+\index{Polar coordinate system}
+\index{Length of a polar curve}
+\index{polar curve, Length of a}
+
+\parargaph{Solution.} The arc length formula for polar coordinates is
+
+\[L=\int{\sqrt{r^2+\frac{dr}{d\theta}^2}~d\theta.}\]
+
+For our equation,
+
+\[\frac{dr}{d\theta}=-\sin\left(\theta\right).\]
+
+\begin{eqnarray}
+	\Rightarrow L&=&\int_0^2\sqrt{\left(1+\cos\left(\theta\right)\right)^2+\left(-\sin\left(\theta\right)\right)^2}~d\theta\nonumber\\
+	&=&\int_0^2\sqrt{\left(1+2\cos\left(\theta\right)+\cos^2\left(\theta\right)\right)+\sin^2\left(\theta\right)}~d\theta\nonumber\\
+	&=&\int_0^2\sqrt{1+2\cos\left(\theta\right)+\left(\cos^2\left(\theta\right)+\sin^2\left(\theta\right)\right)}~d\theta\nonumber\\
+	&=&\int_0^2\sqrt{1+2\cos\left(\theta\right)+1}~d\theta\nonumber\\
+	&=&\int_0^2\sqrt{2+2\cos\left(\theta\right)}~d\theta.\label{270b}
+\end{eqnarray}
+
+Now,
+
+\begin{eqnarray}
+	\cos\left(\theta\right)&=&\cos\left(\frac{\theta}{2}+\frac{\theta}{2}\right)\nonumber\\
+	&=&\cos^2\left(\frac{\theta}{2}\right)-\sin^2\left(\frac{\theta}{2}\right)\nonumber\\
+	&=&\cos^2\left(\frac{\theta}{2}\right)-\left(1-\cos^2\left(\frac{\theta}{2}\right)\right)\nonumber\\
+	&=&2\cos^2\left(\frac{\theta}{2}\right)-1.\label{270a}
+\end{eqnarray}
+
+Substituting \vref{270a} into \vref{270b} gives
+
+\begin{eqnarray*}
+	L&=&\int_0^2\sqrt{2+2\cos\left(\theta\right)}~d\theta\\
+	&=&\int_0^2\sqrt{2+2\left(2\cos^2\left(\frac{\theta}{2}\right)-1\right)}~d\theta\\
+	&=&\int_0^2\sqrt{2+4\cos^2\left(\frac{\theta}{2}\right)-2}~d\theta\\
+	&=&\int_0^2\sqrt{4\cos^2\left(\frac{\theta}{2}\right)}~d\theta\\
+	&=&\int_0^22\cos\left(\frac{\theta}{2}\right)~d\theta.
+\end{eqnarray*}
+
+Now we manipulate the $d\theta$ outside.
+
+\begin{eqnarray*}
+	L&=&\int_0^22\cos\left(\frac{\theta}{2}\right)~\frac{2d\theta}{2}\\
+	&=&2\times2\int_0^2\cos\left(\frac{\theta}{2}\right)~\frac{d\theta}{2}\\
+	&=&4\int_0^2\cos\left(\frac{\theta}{2}\right)~\frac{d\theta}{2}\\
+	&=&4\left[\sin\left(\frac{\theta}{2}\right)\right]_0^2\\
+	&\approx&4\left(0.84\right)\\
+	&=&3.37
+\end{eqnarray*}
+
+Thus, the length of $C$ for $\theta\in\left[0^c,2^c\right]$ is approximately $3.37$.
