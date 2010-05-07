@@ -27,4 +27,4 @@ latex -interaction=nonstopmode $directory.tex > /dev/null
 
 # Create PDF
 echo "Creating $directory.pdf"
-dvipdfm $directory.dvi 2> /dev/null
+dvipdfm $directory.dvi &> /dev/null
