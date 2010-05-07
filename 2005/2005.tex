@@ -1,6 +1,6 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper,makeidx]{book}
 
-\usepackage{times,amssymb,graphicx,varioref,framed,xcolor,iwona,sectsty,cclicenses}
+\usepackage{times,amssymb,graphicx,varioref,framed,xcolor,iwona,sectsty,cclicenses,multienum,makeidx}
 \usepackage[hyphens]{url}
 \usepackage[margin=1in]{geometry}
 \usepackage[Bjarne]{fncychap}
@@ -42,6 +42,11 @@ Posted #3\end{shaded}}
     }
 \makeatother    
 
+\renewcommand{\theenumi}{\alph{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+
+\makeindex
+
 \begin{document}
 	\title{Math Help Forum\\\vspace{12pt}\Large\textsc{A collection of problems and solutions}\vspace{24pt}\\\vspace{24pt}\Huge\textit{2005}}
 	\author{}
@@ -67,30 +72,49 @@ Posted #3\end{shaded}}
 
     \chapter{Calculus and real analysis}
 
+	\section{Real functions}
+
+	\input analysis/calculus-and-real-analysis/real-functions/289.tex
+
     \section{Sequences and series}
+
+	\input analysis/calculus-and-real-analysis/sequences-and-series/269.tex
 
 	\chapter{Differential and integral equations}
 
     \section{Ordinary differential equations}
 
-    \input analysis/differential-and-integral-equations/ordinary-differential-equations/36
-    \input analysis/differential-and-integral-equations/ordinary-differential-equations/63
+    \input analysis/differential-and-integral-equations/ordinary-differential-equations/36.tex
+    \input analysis/differential-and-integral-equations/ordinary-differential-equations/63.tex
+	\input analysis/differential-and-integral-equations/ordinary-differential-equations/287.tex
 
     \section{Integral equations}
 
-    \input analysis/differential-and-integral-equations/integral-equations/37
-    \input analysis/differential-and-integral-equations/integral-equations/43
-    \input analysis/differential-and-integral-equations/integral-equations/80
-	\input analysis/differential-and-integral-equations/integral-equations/86
-	\input analysis/differential-and-integral-equations/integral-equations/234
+    \input analysis/differential-and-integral-equations/integral-equations/37.tex
+    \input analysis/differential-and-integral-equations/integral-equations/43.tex
+    \input analysis/differential-and-integral-equations/integral-equations/80.tex
+	\input analysis/differential-and-integral-equations/integral-equations/86.tex
+	\input analysis/differential-and-integral-equations/integral-equations/234.tex
+	\input analysis/differential-and-integral-equations/integral-equations/270.tex
+
+	\chapter{Functional analysis}
+
+	\section{Fourier analysis}
+
+	\input analysis/functional-analysis/fourier-analysis/248.tex
 
     \part{Geometry}
 
     \chapter{Geometry}
 
+	\section{Linear incidence geometry}
+
+	\input geometry/geometry/real-and-complex-geometry/228.tex
+
     \section{Real and complex geometry}
     
-	\input geometry/geometry/real-and-complex-geometry/77
-	\input geometry/geometry/real-and-complex-geometry/228
-	\input geometry/geometry/real-and-complex-geometry/231
+	\input geometry/geometry/real-and-complex-geometry/77.tex
+	\input geometry/geometry/real-and-complex-geometry/231.tex
+
+	\printindex
 \end{document}
