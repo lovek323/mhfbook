@@ -1,4 +1,4 @@
-size(10cm);
+size(3cm);
 
 // Draw Sierpinski triangle with top vertex A, side s, and depth q.
 void Sierpinski(pair A, real s, int q, bool top=true)
