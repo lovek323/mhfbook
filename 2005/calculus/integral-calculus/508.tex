@@ -1,0 +1,42 @@
+\question{Find
+
+\[\int_0\infty\frac{1}{\left(4x^2+\pi^2\right)\cosh x}~dx\]
+
+using the residue theorem.}{calculus/508-solving-real-integrals-residue-theorem.html}{26 June 2005}
+
+\paragraph{Solution.}\solutionAuthor{hpe}
+
+Since $\left(4x^2+\pi^2\right)\cosh x=\left(2x+i\pi\right)\left(2x-i\pi\right)\cos\left(ix\right)$, the integrand has poles at $z=\pm\left(2k-1\right)\frac{i\pi}{2}$ for $k=1,2,3,\dots$.
+
+The residues at $z=\pm\frac{i\pi}{2}$ are
+
+\[\mbox{Res}\left(f,\pm\frac{1\pi}{2}\right)=\frac{1}{4i\pi^2}\]
+
+and the residues at $z=\pm\left(2k-1\right)\frac{i\pi}{2}$ for $k>1$ are
+
+\[\mbox{Res}\left(f,\left(\pm2k-1\right)\frac{i\pi}{2}\right)=\left(-1\right)^k\frac{1}{4i\pi^2\left(k^2-k\right)}.\]
+
+Now integrate from $x=-+0i$ along the real axis to $x=+R+0i$ and then on the half circle $C=\left\{x:\left|x\right|=R,\Re\left(x\right)>0\right\}$ back to $x=-R+0i$. The result is
+
+\[\int_{-R}^R\frac{1}{\left(4x^2+\pi^2\right)\cosh x}~dx+\int_C\frac{1}{\left(4x^2+\pi^2\right)\cosh x}~dx\]
+
+and by the residue theoerem, this equals
+
+\[\frac{1}{2\pi}+\sum_{k=2}^M\left(-1\right)^k\frac{1}{2\pi\left(k^2-k\right)}\]
+
+where $M$ is a suitable number (abut $R/\pi$). Send $R$ to infinity, then the integral along $C$ goes to zero and we obtain
+
+\[\int_{-\infty}^\infty\frac{1}{\left(4x^2+\pi^2\right)\cosh x}~dx=\frac{1}{2\pi}\left(1+\sum_{k=2}^\infty\left(-1\right)^k\frac{1}{k^2-k}\right).\]
+
+Splitting this infinite sum into terms with even $k=2r$ and odd $k=2r+1$ (allowed since the sum converges absolutely) gives
+
+\begin{eqnarray*}
+	\sum_{k=2}^\infty\left(-1\right)^k\frac{1}{k^2-k}&=&\sum_{r=1}^\infty\frac{1}{\left(2r\right)^2-2r}-\sum_{r=1}^\infty\frac{1}{\left(2r+1\right)^2-\left(2r+1\right)}\\
+	&=&\ln2+\left(\ln2-1\right)
+\end{eqnarray*}
+
+since both sums are essentially alternating harmonic series -- you can see this by using the formula $\frac{1}{z^2-z}=\frac{1}{z-1}-\frac{1}{z}$.
+
+Thus,
+
+\[\int_{-\infty}^\infty\frac{1}{\left(4x^2+\pi^2\right)\cosh x}~dx=\frac{\ln2}{\pi}.\]
