@@ -14,9 +14,11 @@ files="asy/*.asy"
 
 for file in $files
 do
-    echo "Compiling $file"
-    file_basename=`basename "$file"`
-    `asy "$file" -o "asy/$file_basename.eps"`
+	if [ `stat -c%Y "$file"` -ge `stat -c%Y "$directory.pdf"` ]; then
+		echo "Compiling $file"
+		file_basename=`basename "$file"`
+		`asy "$file" -o "asy/$file_basename.eps"`
+	fi
 done
 
 # Compile latex
