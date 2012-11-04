@@ -14,7 +14,7 @@ files="asy/*.asy"
 
 for file in $files
 do
-	if [ `stat -c%Y "$file"` -ge `stat -c%Y "$directory.pdf"` ]; then
+	if [ ! -e "$file" ] || [ `stat -f%Y "$file"` -ge `stat -f%Y "$directory.pdf"` ]; then
 		echo "Compiling $file"
 		file_basename=`basename "$file"`
 		`asy "$file" -o "asy/$file_basename.eps"`
