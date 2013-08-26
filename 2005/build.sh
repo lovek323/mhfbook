@@ -12,9 +12,9 @@ fi
 # Compile asy files
 files="asy/*.asy"
 
-for file in $files
-do
-	if [ ! -e "$file" ] || [ `stat -f%Y "$file"` -ge `stat -f%Y "$directory.pdf"` ]; then
+for file in $files; do
+	if [ ! -e "$file" ] \
+        || [ `stat -c%Y "$file"` -ge `stat -c%Y "$directory.pdf"` ]; then
 		echo "Compiling $file"
 		file_basename=`basename "$file"`
 		`asy "$file" -o "asy/$file_basename.eps"`
@@ -31,3 +31,4 @@ latex -interaction=nonstopmode $directory.tex > /dev/null
 # Create PDF
 echo "Creating $directory.pdf"
 dvipdfm $directory.dvi &> /dev/null
+
